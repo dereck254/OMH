@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/hub-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Ongaro Medical Hub Logo" class="logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="patient-dashboard">
+        <h2>Welcome, <span id="patientName"></span></h2>
+        <p>Your Hospital Number: <span id="hospitalNumber"></span></p>
+
+        <h3>Payment Status</h3>
+        <p>Status: <span id="paymentStatus"></span></p>
+
+        <h3>Consultation Records</h3>
+        <div id="consultationRecords">
+            <!-- Filled dynamically from JS -->
+        </div>
+
+        <h3>Lab Tests (if any)</h3>
+        <div id="labTests">
+            <!-- Filled dynamically from JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/hub-script.js"></script>
+</body>
+</html>

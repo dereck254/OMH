@@ -1,0 +1,28 @@
+# Ignore Visual Studio temporary files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Rider IDE
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# NPM / Node
+node_modules/
+
+# Logs
+*.log
+
+# Others
+*.DS_Store
+*.dbmdl
+*.pdb
+*.cache

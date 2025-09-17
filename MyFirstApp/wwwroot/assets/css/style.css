@@ -1,0 +1,151 @@
+﻿/* ======================= */
+/* Reset & Base Styles */
+/* ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    opacity: 1; /* initial visible state */
+    transition: opacity 2s ease; /* fade-in/out duration */
+}
+
+/* ======================= */
+/* Header & Navigation */
+/* ======================= */
+header {
+    background: #0077b6;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    header .logo {
+        display: flex;
+        align-items: center;
+    }
+
+        header .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+            header nav ul li a:hover,
+            header nav ul li a.active {
+                color: #ffd60a;
+            }
+
+/* ======================= */
+/* Sections & Cards */
+/* ======================= */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: #023e8a;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+    .card h3 {
+        margin-bottom: 10px;
+        color: #0077b6;
+    }
+
+/* ======================= */
+/* Login & Buttons */
+/* ======================= */
+.login-options,
+.login-section {
+    text-align: center;
+}
+
+.roles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.role-btn, .btn {
+    background: #0077b6;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+    .role-btn:hover,
+    .btn:hover {
+        background: #023e8a;
+    }
+
+/* ======================= */
+/* Forms */
+/* ======================= */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ======================= */
+/* Footer */
+/* ======================= */
+footer {
+    background: #0077b6;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* ======================= */
+/* Page Transitions (Fade) */
+/* ======================= */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 2s ease; /* slower fade for noticeable navigation */
+}

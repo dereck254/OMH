@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Officer Login - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/billing.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="billing-header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ongaro Medical Hub Logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+    </header>
+
+    <section class="billing-login-section">
+        <h2>Billing & Payments Office</h2>
+        <p>Thank you for visiting Ongaro Medical Hub. Payment options available below.</p>
+
+        <ul class="payment-info">
+            <li>MPESA: 0713500754 / Buy Goods: 8807680 / Paybill: 542542 Account: 00104276293050</li>
+            <li>PayPal: ongaromedicalhub.info@gmail.com</li>
+            <li>Card Payments & Bank Payments available</li>
+        </ul>
+
+        <form id="billingLoginForm" class="billing-login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="Pesa" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" value="1234" required>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+
+        <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+    </section>
+
+    <footer class="billing-footer">
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/billing.js"></script>
+</body>
+</html>

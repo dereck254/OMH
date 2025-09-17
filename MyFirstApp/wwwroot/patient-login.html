@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/hub-style.css">
+</head>
+<body data-role="patient-login">
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Ongaro Logo" class="logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Patient Login</h2>
+            <form id="patientLoginForm">
+                <label for="hospitalNumber">Hospital Number:</label>
+                <input type="text" id="hospitalNumber" placeholder="OMH-xxxx" required>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" placeholder="Your First Name" required>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/hub-script.js"></script>
+</body>
+</html>

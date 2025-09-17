@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .logout-section {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+            .logout-section h2 {
+                color: #0077b6;
+                font-size: 2em;
+                margin-bottom: 15px;
+            }
+
+            .logout-section p {
+                margin-bottom: 15px;
+                font-size: 1.1em;
+            }
+
+            .logout-section .btn-group a {
+                text-decoration: none;
+                padding: 12px 25px;
+                margin: 5px;
+                background-color: #0077b6;
+                color: #fff;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background 0.3s ease;
+            }
+
+                .logout-section .btn-group a:hover {
+                    background-color: #023e8a;
+                }
+
+        .toast {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 30px;
+            border-radius: 10px;
+            background-color: #0077b6;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ongaro Medical Hub Logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Logout Section -->
+    <section class="logout-section" id="logoutSection">
+        <h2>Logout Successful</h2>
+        <p>You have been logged out of Ongaro Medical Hub.</p>
+        <p>Thank you for using Ongaro Medical Hub!</p>
+        <div class="btn-group">
+            <a id="loginAgainBtn" href="#">Login Again</a>
+            <a href="index.html">Go to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const logoutSection = document.getElementById("logoutSection");
+            const loginAgainBtn = document.getElementById("loginAgainBtn");
+
+            // Detect previous page and set appropriate login page
+            const referrer = document.referrer;
+            if (referrer.includes("billing-and-payment") || referrer.includes("billing-login")) {
+                loginAgainBtn.href = "billing-login.html";
+            } else {
+                loginAgainBtn.href = "admin-login.html";
+            }
+
+            // Show toast first
+            const toast = document.createElement("div");
+            toast.className = "toast";
+            toast.textContent = "Logging out...!";
+            document.body.appendChild(toast);
+
+            setTimeout(() => toast.style.opacity = 1, 50);
+
+            // Hide toast and reveal main content after 1.5s
+            setTimeout(() => {
+                toast.style.opacity = 0;
+                setTimeout(() => {
+                    toast.remove();
+                    logoutSection.style.opacity = 1;
+                }, 500);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

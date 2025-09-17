@@ -1,0 +1,81 @@
+﻿/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #e6f2ff, #cce0ff); /* nice hospital feel */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container that centers everything */
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+    /* Logo */
+    .container img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    /* Titles */
+    .container h1 {
+        color: #003366;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .container h2 {
+        color: #0059b3;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    /* Mission & Vision */
+    .container .text-section {
+        margin: 20px 0;
+    }
+
+        .container .text-section h3 {
+            color: #003366;
+            margin-bottom: 8px;
+        }
+
+        .container .text-section p {
+            font-size: 15px;
+            color: #333;
+        }
+
+/* Login buttons */
+.button-section {
+    margin-top: 25px;
+}
+
+    .button-section a {
+        display: inline-block;
+        margin: 8px;
+        padding: 12px 24px;
+        background-color: #0059b3;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
+
+        .button-section a:hover {
+            background-color: #003366;
+        }

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing & Payments - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/billing.css">
+</head>
+<body>
+    <header class="billing-header">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ongaro Medical Hub Logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <section class="billing-dashboard">
+        <h2>Billing & Payments Dashboard</h2>
+
+        <table id="patientTable">
+            <thead>
+                <tr>
+                    <th>Hospital No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Payment Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated by JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Pay Now Modal -->
+    <div id="payNowModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Payment Options</h3>
+            <p>Amount to Pay: <strong>KES 1000</strong></p>
+            <div class="payment-methods">
+                <button class="payment-option" data-method="mpesa">Lipa na Mpesa</button>
+                <button class="payment-option" data-method="paybill">Paybill</button>
+                <button class="payment-option" data-method="paypal">PayPal</button>
+            </div>
+            <div class="payment-instructions" id="paymentInstructions"></div>
+        </div>
+    </div>
+
+    <footer class="billing-footer">
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/billing.js"></script>
+</body>
+</html>

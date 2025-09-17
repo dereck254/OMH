@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/hub-style.css">
+</head>
+<body data-role="nurse">
+    <header>
+        <div class="logo-section">
+            <img src="assets/images/logo.png" alt="Ongaro Logo" class="logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+
+    <main>
+        <section class="dashboard-section">
+            <h2>Nurse Dashboard</h2>
+            <p>Manage patient vitals, check-in, and follow-up notes.</p>
+
+            <table id="nursePatientTable">
+                <thead>
+                    <tr>
+                        <th>Hospital No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/hub-script.js"></script>
+</body>
+</html>

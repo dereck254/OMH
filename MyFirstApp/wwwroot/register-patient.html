@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient - Ongaro Medical Hub</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/workflow.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Ongaro Medical Hub Logo">
+            <h1>Ongaro Medical Hub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="register-patient.html" class="active">Register Patient</a></li>
+                <li><a href="billing-login.html">Billing</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Patient Registration</h2>
+        <form id="patientForm">
+            <label for="hospitalNumber">Hospital Number:</label>
+            <input type="text" id="hospitalNumber" name="hospitalNumber" readonly>
+
+            <label for="regDate">Registration Date & Time:</label>
+            <input type="text" id="regDate" name="regDate" readonly>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="patientAge">Age:</label>
+            <input type="number" id="patientAge" name="patientAge" required>
+
+            <label for="patientGender">Gender:</label>
+            <select id="patientGender" name="patientGender" required>
+                <option value="">--Select--</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="patientPhone">Phone Number:</label>
+            <input type="tel" id="patientPhone" name="patientPhone" placeholder="07XXXXXXXX" required>
+
+            <label for="patientEmail">Email:</label>
+            <input type="email" id="patientEmail" name="patientEmail">
+
+            <label for="patientAddress">County:</label>
+            <textarea id="patientAddress" name="patientAddress" rows="3"></textarea>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <div class="search-section">
+            <h3>Search Patients</h3>
+            <input type="text" id="searchInput" placeholder="Search by Hospital No, Name, or Phone">
+            <button id="searchBtn" class="btn">Search</button>
+        </div>
+
+        <div id="patientList" class="patient-list">
+            <h3>Registered Patients</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hospital No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>County</th>
+                        <th>Registered</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patientRecords"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ongaro Medical Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/workflow.js"></script>
+</body>
+</html>
